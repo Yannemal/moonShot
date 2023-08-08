@@ -5,20 +5,36 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    // MARK: - other View / Structs
 
+
+struct ContentView: View {
+    // MARK: - DATA Content
+
+    // init Class here :
+      
+ 
+    var body: some View {
+        
+        Color.indigo
+            .ignoresSafeArea()
+            .opacity(0.7)
+ 
+    } // end body some view THEN
+           
+        /* ************************************************************* */
+        /*                                                               */
+        /*                      MARK: - METHOD                           */
+        /*                                                               */
+        /* ************************************************************* */
+        
+} // endContentView
+
+
+// MARK: - PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
