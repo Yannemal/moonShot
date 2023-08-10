@@ -20,8 +20,9 @@ struct Address: Codable {
 struct ContentView: View {
     // MARK: - DATA Content
 
-    // init Class here :
-      
+    let layout = [
+        GridItem(.adaptive(minimum: 80))
+           ]
  
     var body: some View {
         
@@ -29,7 +30,14 @@ struct ContentView: View {
             Color.indigo
                 .ignoresSafeArea()
             .opacity(0.7)
-            
+
+            ScrollView {
+                LazyVGrid(columns: layout) {
+                    ForEach(0..<499) {
+                        Text("code \($0)")
+                    }
+                }
+            }
             Button("Decode JSON") {
                 let input = """
                 {
@@ -40,9 +48,9 @@ struct ContentView: View {
                      }
                 }
                 """
-                
+
                 let data = Data(input.utf8)
-                
+
                 if let user = try? JSONDecoder().decode(User.self, from: data) {
                     print(user.address.street)
                     print(user.name)
