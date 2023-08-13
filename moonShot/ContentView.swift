@@ -21,7 +21,9 @@ struct ContentView: View {
     // MARK: - DATA Content
 
     let layout = [
-        GridItem(.adaptive(minimum: 80))
+        GridItem(.flexible(minimum: 30, maximum: 80)),
+        GridItem(.flexible(minimum: 20, maximum: 40)),
+        GridItem(.flexible(minimum: 50, maximum: 120))
            ]
  
     var body: some View {
@@ -32,9 +34,13 @@ struct ContentView: View {
             .opacity(0.7)
 
             ScrollView {
-                LazyVGrid(columns: layout) {
-                    ForEach(0..<499) {
+                LazyVGrid(columns: layout, spacing: 5) {
+                    ForEach(0..<499, id: \.self) {
                         Text("code \($0)")
+                        Color.red
+                        
+                       
+                        Color.indigo.frame(width: 10, height: 50)
                     }
                 }
             }
@@ -56,6 +62,11 @@ struct ContentView: View {
                     print(user.name)
                 }
             }
+                .padding(15)
+                .foregroundColor(.black)
+                .background(Color.white)
+                .border(Color.black, width: 5)
+            
         }
  
     } // end body some view THEN
