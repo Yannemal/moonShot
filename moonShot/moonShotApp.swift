@@ -2,8 +2,8 @@
 //  moonShotApp.swift
 //  moonShot
 //
-//  Created by yann guyt on 07/08/2023.
-//
+//  Created by yannemal on 07/08/2023.
+//  project 8 100DaysofSwiftUI by Paul Hudson
 
 import SwiftUI
 
