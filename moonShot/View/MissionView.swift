@@ -32,6 +32,11 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
                     
+                    Rectangle()
+                        .frame(height: 8)
+                        .foregroundColor(.lightBackground)
+                        .padding(.vertical)
+                    
                     VStack(alignment: .leading) {
                         Text("Mission Highlights")
                             .font(.title.bold())
@@ -41,20 +46,28 @@ struct MissionView: View {
                     } // inner VStack
                     .padding(.horizontal)
                     
+                    Rectangle()
+                        .frame(height: 8)
+                        .foregroundColor(.lightBackground)
+                        .padding(.vertical)
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
+                            // ,role is defined in Mission.swift
                             ForEach(crew, id: \.role) { crewMember in
-                                // for each crewmember we will have a nav link to show details
                                 NavigationLink {
-                                    Text("Astronaut details")
+                                    AstronautView(astronaut: crewMember.astronaut)
+                                    // add new SwiftUI View details here
                                 } label: {
                                     HStack {
                                         Image(crewMember.astronaut.id)
                                             .resizable()
+                                        //size image is based on supplied images and hardcoded
                                             .frame(width: 104, height: 72)
                                             .clipShape(Capsule())
                                             .overlay(
                                                 Capsule()
+                                                // stroke is half inside half outside. .strokeBorder is completely indside shape
                                                     .strokeBorder(.white,
                                                                   lineWidth: 1)
                                                                  )
@@ -110,7 +123,7 @@ struct MissionView: View {
 
 
 // MARK: - PREVIEW
-// needs more handson for preview gto work here
+// needs more handson for preview to work here
 struct MissionView_Previews: PreviewProvider {
     static let missions: [Mission] = Bundle.main.decode("missions.json")
     static let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C07F0B92A93630400AE9E16 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F0B82A93630400AE9E16 /* AstronautView.swift */; };
 		7CD6EB2F2A88D88B0085947B /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6EB2D2A88D88A0085947B /* astronauts.json */; };
 		7CD6EB302A88D88B0085947B /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6EB2E2A88D88B0085947B /* missions.json */; };
 		7CD6EB322A88DBBF0085947B /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6EB312A88DBBF0085947B /* Astronaut.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C07F0B82A93630400AE9E16 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 		7CD6EB2D2A88D88A0085947B /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		7CD6EB2E2A88D88B0085947B /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		7CD6EB312A88DBBF0085947B /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				7CFA33492A8003660094D346 /* ContentView.swift */,
 				7CD6EB3B2A89374D0085947B /* MissionView.swift */,
+				7C07F0B82A93630400AE9E16 /* AstronautView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				7CD6EB3C2A89374D0085947B /* MissionView.swift in Sources */,
 				7CD6EB322A88DBBF0085947B /* Astronaut.swift in Sources */,
+				7C07F0B92A93630400AE9E16 /* AstronautView.swift in Sources */,
 				7CD6EB3A2A8925A00085947B /* Color-Theme.swift in Sources */,
 				7CD6EB362A88DCC30085947B /* Bundle - Decodable.swift in Sources */,
 				7CFA334A2A8003660094D346 /* ContentView.swift in Sources */,

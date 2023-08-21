@@ -28,7 +28,7 @@ struct ContentView: View {
                  
                     ForEach(missions) { mission in
                         NavigationLink {
-                            Text("Detail View")
+                           MissionView(mission: mission, astronauts: astronauts)
                         } label: {
                             
                             VStack {
@@ -38,6 +38,7 @@ struct ContentView: View {
                                     .frame(width: 100, height: 100)
                                     //to help get the image away from the border
                                     .padding()
+                                    
                                 
                                 VStack {
                                     Text(mission.displayName)
